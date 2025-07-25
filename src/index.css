@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap');
+@import "tailwindcss";
+
+/* Custom Font (Optional) - Import from Google Fonts or similar */
+/* Example: Using 'Montserrat' for body text and 'Playfair Display' for signature/headings */
+
+body {
+  font-family: 'Montserrat', sans-serif; /* Applied globally */
+}
+
+/* Specific font for your name/logo in Navbar, if desired */
+.font-signature {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Basic Fade-in-up Animation for Hero section elements */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+  opacity: 0; /* Start hidden */
+}
+
+/* NEW: Fade-in from Left Animation */
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-fade-in-left {
+  animation: fadeInLeft 0.8s ease-out forwards;
+  opacity: 0; /* Start hidden */
+}
+
+/* NEW: Zoom In Animation */
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-zoom-in {
+  animation: zoomIn 0.8s ease-out forwards;
+  opacity: 0; /* Start hidden */
+}
+
+
+/* Animation Delays - IMPORTANT for staggered animations */
+.animation-delay-200 {
+  animation-delay: 0.2s;
+}
+.animation-delay-400 {
+  animation-delay: 0.4s;
+}
+.animation-delay-600 {
+  animation-delay: 0.6s;
+}
+.animation-delay-800 { /* Added new delay for the image */
+  animation-delay: 0.8s;
+}
+
+/* Optional: Smooth Scroll Behavior for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+/* Custom Scrollbar for Webkit browsers (Chrome, Safari, Edge) */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px; /* Width of the vertical scrollbar */
+  height: 8px; /* Height of the horizontal scrollbar */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #333; /* Dark background for the scrollbar track */
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #4A90E2; /* Blue scrollbar thumb */
+  border-radius: 10px;
+  border: 2px solid #333; /* Slightly darker border for the thumb */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #5CA0EF; /* Lighter blue on hover */
+}
+
+/* For Firefox (basic styling) */
+.custom-scrollbar {
+  scrollbar-width: thin; /* "auto" or "none" */
+  scrollbar-color: #4A90E2 #333; /* thumb and track color */
+}
+/* For the underline effect on section headings */
+.section-heading-underline {
+  position: relative;
+  display: inline-block; /* Ensures the ::after pseudo-element is correctly positioned relative to the text width */
+}
+
+.section-heading-underline::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -8px; /* Adjusts distance of the underline from the text */
+  width: 60px; /* Length of the underline */
+  height: 4px; /* Thickness of the underline */
+  background-color: #3B82F6; /* A shade of blue, similar to Tailwind's blue-500 */
+  border-radius: 2px;
+  transform: translateX(-50%); /* Centers the underline below the text */
+  opacity: 0; /* Start hidden */
+  animation: underline-fade-in 0.8s ease-out forwards; /* Animation for the underline */
+  animation-delay: 0.8s; /* Delay for the underline animation to start after the text */
+}
+
+/* Keyframes for the underline animation */
+@keyframes underline-fade-in {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    width: 60px; /* End width of the underline */
+    opacity: 1;
+  }
+}
+
+/* Ensure fade-in-up animation is defined (it should be if your other sections animate) */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.6s ease-out forwards;
+}
+
+/* For the underline effect on section headings */
+.section-heading-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.section-heading-underline::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -8px; /* Adjusts distance of the underline from the text */
+  width: 60px; /* Length of the underline */
+  height: 4px; /* Thickness of the underline */
+  background-color: #3B82F6; /* A shade of blue, similar to Tailwind's blue-500 */
+  border-radius: 2px;
+  transform: translateX(-50%); /* Centers the underline below the text */
+  opacity: 0; /* Start hidden */
+  animation: underline-fade-in 0.8s ease-out forwards; /* Animation for the underline */
+  animation-delay: 0.8s; /* Delay for the underline animation to start after the text */
+}
+
+/* Keyframes for the underline animation */
+@keyframes underline-fade-in {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    width: 60px; /* End width of the underline */
+    opacity: 1;
+  }
+}
+
+/* Ensure fade-in-up animation is defined (it should be if your other sections animate) */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.6s ease-out forwards;
+}
+
+/* For the underline effect on section headings */
+.section-heading-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.section-heading-underline::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -8px;
+  width: 60px;
+  height: 4px;
+  background-color: #3B82F6; /* Tailwind blue-500 */
+  border-radius: 2px;
+  transform: translateX(-50%);
+  opacity: 0;
+  animation: underline-fade-in 0.8s ease-out forwards;
+  animation-delay: 0.8s;
+}
+
+/* Keyframes for the underline animation */
+@keyframes underline-fade-in {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    width: 60px;
+    opacity: 1;
+  }
+}
+
+/* Ensure fade-in-up animation is defined */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.6s ease-out forwards;
+}
