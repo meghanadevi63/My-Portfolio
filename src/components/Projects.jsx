@@ -19,8 +19,8 @@ const projects = [
     title: 'UPI Fraud Detection System',
     description: 'A machine learning-based fraud detection system using Random Forest and XGBoost. Includes feature engineering and a full-stack app built with Streamlit, FastAPI, and PostgreSQL for secure role-based authentication.',
     imageUrl: upiFraudImage, // Use the imported image variable here
-    githubUrl: 'https://github.com/yourusername/task-manager-repo', // **Remember to update this!**
-    liveUrl: 'https://task-manager-demo.vercel.app', // **Remember to update this!**
+    githubUrl: 'https://github.com/meghanadevi63/upi-payment-fraud-detection', // **Remember to update this!**
+    liveUrl: '', // **Remember to update this!**
   },
   {
     title: 'Quick Delivery Lite',
