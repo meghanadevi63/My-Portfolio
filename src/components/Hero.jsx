@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaArrowRight, FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa'; // Import new icons
-import heroImage from '../assets/profile.png'; // Make sure this path is correct
+import heroImage from '../assets/profile1.png'; // Make sure this path is correct
 
 const Hero = () => {
   return (
